@@ -9,12 +9,14 @@ namespace BibliotecaApp
     {
         public static void Main(string[] args)
         {
-            using var db = new AppDbContexto();
-            var BibliotecaDb = new BibliotecaAppService(db);
-            InterfaceTextoService menus = new InterfaceTextoService(BibliotecaDb);
-            menus.TipoUsuario();
-
-            
+            using (var context = new AppDbContexto())
+            {
+                context.Database.EnsureCreated();
+                var bibliotecaDb = new BibliotecaAppService(context);
+                
+                InterfaceTextoService menus = new InterfaceTextoService(bibliotecaDb);
+                menus.TipoUsuario();
+            }
         }
     }
 }
