@@ -25,7 +25,7 @@ A data exata em que o livro foi retirado.
 O cálculo automático da data de devolução.
 O vínculo entre o ID do usuário e o exemplar alugado.
 
-omo Executar o Projeto
+Como Executar o Projeto
 Este projeto utiliza SQLite, o que significa que o banco de dados roda localmente na sua máquina sem necessidade de configurações externas complexas.
 Pré-requisitos: Certifique-se de ter o .NET SDK instalado.
 
